@@ -1,8 +1,9 @@
 # scroll_phat_hd-japanese-ticker
+
 Raspberry PiのScroll pHat HDで、日本語のメッセージを流すやつ
 
+## 使い方
 
-# 使い方
 misaki.pyをいつものPythonスクリプトとおんなじ感じで起動してください。
 デフォルトでは時計が流れます。
 
