@@ -13,15 +13,7 @@ from scrollphathd.fonts import font5x7
 
 import misaki
 
-print("""
-Scroll pHAT HD: Hello World
-
-Scrolls "Hello World" across the screen
-in a 5x7 pixel large font.
-
-Press Ctrl+C to exit!
-
-""")
+print("Press Ctrl+C to exit!")
 
 channels = {}
 
@@ -53,16 +45,11 @@ def accept_thread():
 
 		client_sock.close()
 
-#Uncomment to rotate the text
-#scrollphathd.rotate(180)
-
-#Set a more eye-friendly default brightness
 scrollphathd.set_brightness(0.3)
 
 thread = threading.Thread(target = accept_thread, name = "accept", args = ())
 thread.start()
 
-channels["time"] = lambda: time.asctime(time.localtime())
 channels["time"] = lambda: datetime.datetime.now().strftime("%m/%d %H:%M")
 
 while True:
